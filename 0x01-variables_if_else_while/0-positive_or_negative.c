@@ -25,4 +25,5 @@ int main(void)
 		printf("%d is positive\n", n);
 	}
 	return (0);
-}	
+}
+
