@@ -1,6 +1,10 @@
 #ifndef HOLBERTON_H_INCLUDED
 #define HOLBERTON_H_INCLUDED
-
+/**
+ * _putchar - writes the character c to std
+ * @c: parameter to compare
+ * Return: 1 or 0
+ */
 int _putchar(char);
 void print_alphabet(void);
 void print_alphabet_x10(void);
