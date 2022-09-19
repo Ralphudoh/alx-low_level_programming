@@ -112,7 +112,7 @@ int print_last_digit(int);
 
 void jack_bauer(void);
 /**
- * times_table - times this 
+ * times_table - times this
  */
 
 void times_table(void);
@@ -222,5 +222,4 @@ void swap_int(int *a, int *b);
  */
 
 int _strlen(char *s);
-
 #endif
