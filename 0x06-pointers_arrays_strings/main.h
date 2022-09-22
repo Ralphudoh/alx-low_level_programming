@@ -2,9 +2,12 @@
 #define MAIN_H
 
 /**
- * Desc: Header file containing prototypes for all functions
- *       used in the 0x05-pointers_arrays_strings directory.
+ * _putchar - writes the character c to std
+ * @c: parameter to compare
+ * Return: 1 or 0
  */
+
+
 
 int _putchar(char c);
 char *_strcat(char *dest, char *src);
