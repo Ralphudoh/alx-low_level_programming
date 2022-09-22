@@ -1,8 +1,7 @@
-#include "main.h"
 #include <stdio.h>
 
 int main(void)
-
+/* main return (0) */
 {
 	int n;
 	int a[5];
