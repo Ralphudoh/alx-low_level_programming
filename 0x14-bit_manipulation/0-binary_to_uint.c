@@ -1,35 +1,47 @@
-/*
- * File: 0-binary_to_uint.c
- */
-
 #include "main.h"
 
 /**
- * binary_to_uint - Converts a binary number to an unsigned int.
- * @b: A pointer to a string of 0 and 1 chars.
- *
- * Return: If b is NULL or contains chars not 0 or 1 - 0.
- *         Otherwise - the converted number.
+ * power - gets the power of a number
+ * @base: the base number
+ * @expo: the exponent
+ * Return: base ^ expo
  */
-unsigned int binary_to_uint(const char *b)
+uint power(uint base, uint expo)
 {
-	unsigned int num = 0, mult = 1;
-	int len;
+	if (base == 0)
+		return (0);
+	if (base == 1)
+		return (1);
+	if (expo == 0)
+		return (1);
+	if (expo == 1)
+		return (base);
+	return (base * power(base, expo - 1));
+}
 
-	if (b == '\0')
+/**
+ * binary_to_uint - convert a binary number to an unsigned integer
+ * @b: a stream of binary digits
+ * Return: the converted number, or 0 if
+ *	* there is one or more chars in the stream that isn't 0 or 1
+ *	* b is NULL
+ */
+uint binary_to_uint(const char *b)
+{
+	uint length, num;
+	int i;
+
+	length = num = 0;
+	if (b == (void *)0)
 		return (0);
 
-	for (len = 0; b[len];)
-		len++;
-
-	for (len -= 1; len >= 0; len--)
-	{
-		if (b[len] != '0' && b[len] != '1')
+	for (length = 0; b[length]; length++)
+		if (b[length] != '0' && b[length] != '1')
 			return (0);
-
-		num += (b[len] - '0') * mult;
-		mult *= 2;
-	}
-
+	if (length == 0)
+		return (0);
+	for (i = --length; i >= 0; i--)
+		if (b[i] == '1')
+			num += power(2, length - i);
 	return (num);
 }
