@@ -2,12 +2,11 @@
 #include <stdio.h>
 
 /**
-* _strcpy - copy char
-* @dest: pointer var
-* @src: pointer txt
-*
-* Return: pointer
-*/
+ * _strcpy - copy char
+ * @dest: pointer var
+ * @src: pointer txt
+ * Return: pointer
+ */
 char *_strcpy(char *dest, char *src)
 {
 	int i = 0;

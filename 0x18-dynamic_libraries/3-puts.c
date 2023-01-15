@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* _puts - print string with array
-* @str: string
-*/
+ * _puts - print string with array
+ * @str: string
+ */
 
 void _puts(char *str)
 {
@@ -11,8 +11,8 @@ void _puts(char *str)
 
 	while (i[str] != '\0')
 	{
-	_putchar (str[i]);
-	i++;
+		_putchar (str[i]);
+		i++;
 	}
 	_putchar ('\n');
 }
